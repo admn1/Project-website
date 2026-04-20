@@ -24,13 +24,13 @@ export default function Navbar() {
   return (
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`} id="mainNav">
       <Link href="/" className="nav-logo">
-        <img src="/CARtel Supply logo 2 nobg.png" alt="CARtel Logo" style={{ height: '70px', marginTop: '5px' }} />
+        <img src="/CARtel Supply logo 2 nobg.png" alt="CARtel Logo" />
       </Link>
       
       <button 
         className="mobile-menu-btn" 
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        style={{ display: 'none' }} // Replicating the "none" from CSS but keeping it accessible
+        aria-label="Toggle Menu"
       >
         ≡
       </button>

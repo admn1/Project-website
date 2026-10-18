@@ -1,23 +1,22 @@
 {
-  "name": "cartel-web",
-  "version": "0.1.0",
-  "private": true,
+  "name": "smart-car-touchscreen-website",
+  "version": "1.0.0",
+  "description": "Modern Arabic RTL Landing Page for Smart Car Touchscreen Display",
+  "main": "server.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
+  "keywords": [
+    "car-touchscreen",
+    "landing-page",
+    "arabic-rtl",
+    "express",
+    "carplay"
+  ],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "framer-motion": "^12.38.0",
-    "next": "16.2.4",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
-    "tailwindcss": "^4"
+    "express": "^4.21.2"
   }
 }

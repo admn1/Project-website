@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>شاشة السيارة الذكية | تجربة القيادة المستقبلية</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/icon.png">
+  
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
+  <!-- Background Ambience & Cyber Grid -->
+  <div class="ambient-grid"></div>
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+
+  <!-- Header / Glassmorphism Sticky Navbar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="الصفحة الرئيسية">
+        <img src="images/icon.png" alt="شعار الشركة" class="logo-icon" width="46" height="46">
+        <img src="images/name.png" alt="اسم الشركة" class="logo-name" height="34">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">الرئيسية</a></li>
+          <li class="nav-item"><a href="#showcase" class="nav-link">المعرض التفاعلي</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">المواصفات والمميزات</a></li>
+          <li class="nav-item"><a href="#steps" class="nav-link">طريقة التركيب</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA -->
+      <div class="nav-actions">
+        <a href="https://wa.me/966551798746" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glow btn-sm">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>طلب فوري</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <img src="images/name.png" alt="الشعار" height="30">
+      <button class="close-drawer" id="closeDrawer" aria-label="إغلاق القائمة">&times;</button>
+    </div>
+    <ul class="drawer-nav">
+      <li><a href="#hero" class="drawer-link">الرئيسية</a></li>
+      <li><a href="#showcase" class="drawer-link">المعرض التفاعلي</a></li>
+      <li><a href="#features" class="drawer-link">المواصفات والمميزات</a></li>
+      <li><a href="#steps" class="drawer-link">طريقة التركيب</a></li>
+      <li><a href="#faq" class="drawer-link">الأسئلة الشائعة</a></li>
+      <li><a href="#contact" class="drawer-link">تواصل معنا</a></li>
+    </ul>
+    <div class="drawer-cta">
+      <a href="https://wa.me/966551798746" target="_blank" rel="noopener noreferrer" class="btn btn-primary-glow btn-full">
+        <span>تواصل معنا عبر واتساب</span>
+      </a>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content" data-reveal="fade-up">
+        
+        <!-- Live Tag Badge -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span class="badge-text">الجيل الأحدث 2026 | شاشة السيارة الذكية المتكاملة</span>
+        </div>
+
+        <h1 class="hero-title">
+          حوّل سيارتك إلى <span class="text-neon-red">قمرة قيادة ذكية</span> فائقة التطور
+        </h1>
+
+        <p class="hero-description">
+          استمتع باتصال لاسلكي فوري مع <strong>Apple CarPlay</strong> و<strong>Android Auto</strong>، شاشة لمسية HD نابضة بالحياة، كاميرا خلفية بدقة FHD 1080P وملاحة لحظية بدون الحاجة إلى فك مسجل سيارتك الأصلي أو تعديل أي أسلاك.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-actions">
+          <a href="https://wa.me/966551798746" target="_blank" rel="noopener noreferrer" class="btn btn-primary-glow btn-lg btn-pulse">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.449.741.964 1.2 1.348 1.203 1.579 1.242 1.802 1.353.223.111.353.093.484-.058.13-.151.558-.65.707-.874.149-.224.298-.187.5-.112.203.075 1.288.607 1.51.718.223.111.371.166.425.26.054.094.054.545-.09 1.05z"/>
+            </svg>
+            <span>تواصل معنا واطلب الآن</span>
+          </a>
+
+          <a href="#showcase" class="btn btn-secondary-glass btn-lg">
+            <span>استكشف الجهاز بزاوية 360°</span>
+            <svg class="arrow-down-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+
+        <!-- Quick Spec Highlights Badges -->
+        <div class="hero-specs-row">
+          <div class="spec-pill">
+            <span class="spec-pill-icon">✨</span>
+            <span class="spec-pill-text">دقة 1024×600 HD</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-pill-icon">⚡</span>
+            <span class="spec-pill-text">CarPlay & Auto لاسلكي</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-pill-icon">📷</span>
+            <span class="spec-pill-text">كاميرا 1080P بزاوية 178°</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-pill-icon">🔌</span>
+            <span class="spec-pill-text">جهد شامل 12-24 فولت</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Visual Display -->
+      <div class="hero-visual" data-reveal="fade-left">
+        <div class="hero-screen-wrap">
+          <div class="screen-frame-glow"></div>
+          <div class="screen-badge-live">
+            <span class="live-dot"></span>
+            <span>بث لاسلكي مباشر</span>
+          </div>
+          <img src="images/front product.png" alt="شاشة السيارة الذكية - الواجهة الأمامية" class="hero-product-img">
+          
+          <!-- Floating Feature Cards on Hero -->
+          <div class="floating-badge badge-top-right">
+            <div class="floating-icon">🗺️</div>
+            <div class="floating-text">
+              <strong>ملاحة Google Maps</strong>
+              <small>توجيه صوتي فوري</small>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div class="floating-icon">🎙️</div>
+            <div class="floating-text">
+              <strong>تحكم صوتي ذكي</strong>
+              <small>Siri & Google Assistant</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Product Showcase Section (Crucial Feature) -->
+  <section id="showcase" class="showcase-section">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-title-wrap" data-reveal="fade-up">
+        <span class="section-subtitle">المعرض التفاعلي المتقدم</span>
+        <h2 class="section-title">استكشف الجهاز من جميع الزوايا</h2>
+        <p class="section-desc">
+          قم بالتمرير للأسفل أو التبديل بين الواجهتين الأمامية والخلفية لرؤية تفاصيل الشاشة والمنافذ وحامل التثبيت بدقة متناهية.
+        </p>
+      </div>
+
+      <!-- View Controls Switcher -->
+      <div class="showcase-controls" data-reveal="fade-up">
+        <button type="button" class="view-btn active" id="btnViewFront" data-view="front">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>الواجهة الأمامية (الشاشة)</span>
+        </button>
+        <button type="button" class="view-btn" id="btnViewBack" data-view="back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>الواجهة الخلفية (المنافذ والتثبيت)</span>
+        </button>
+        <button type="button" class="view-btn" id="btnAutoRotate">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          <span id="autoRotateText">تدوير تلقائي</span>
+        </button>
+      </div>
+
+      <!-- 3D Flip & Scroll Showcase Card Container -->
+      <div class="showcase-viewport" id="showcaseViewport">
+        
+        <!-- Interactive 3D Card -->
+        <div class="product-3d-card" id="product3dCard">
+          
+          <!-- Front Face -->
+          <div class="card-face face-front">
+            <div class="product-glare"></div>
+            <img src="images/front product.png" alt="الشاشة من الأمام" class="product-img">
+            
+            <!-- Hotspots on Front Face -->
+            <div class="hotspot-pin pin-screen" style="top: 35%; right: 48%;" data-tooltip="شاشة لمس HD فائقة الدقة 1024×600 ملونة بالكامل">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">+</span>
+            </div>
+            <div class="hotspot-pin pin-carplay" style="top: 60%; right: 28%;" data-tooltip="أيقونات Apple CarPlay و Android Auto اللاسلكية">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">+</span>
+            </div>
+            <div class="hotspot-pin pin-mic" style="bottom: 18%; right: 75%;" data-tooltip="ميكروفون حساس مدمج للأوامر الصوتية والمكالمات">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">+</span>
+            </div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="card-face face-back">
+            <div class="product-glare"></div>
+            <img src="images/back product.png" alt="الشاشة من الخلف" class="product-img">
+            
+            <!-- Hotspots on Back Face -->
+            <div class="hotspot-pin pin-mount" style="top: 48%; right: 48%;" data-tooltip="قاعدة تثبيت معدنية مرنة قابلة للدوران 180° و 360°">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">+</span>
+            </div>
+            <div class="hotspot-pin pin-ports" style="top: 48%; right: 18%;" data-tooltip="منافذ الإدخال: USB، بطاقة SD، منفذ كاميرا 1080P ومخرج AUX">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">+</span>
+            </div>
+            <div class="hotspot-pin pin-power" style="top: 65%; right: 78%;" data-tooltip="منفذ الطاقة الذكي يدعم جهد 12V إلى 24V لجميع المركبات">
+              <span class="hotspot-pulse"></span>
+              <span class="hotspot-core">+</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Tooltip Box -->
+        <div class="hotspot-tooltip-box" id="hotspotTooltip">
+          <span class="tooltip-icon">💡</span>
+          <span class="tooltip-text">انقر أو مرر على النقاط المضيئة لاكتشاف تفاصيل الجهاز</span>
+        </div>
+
+      </div>
+
+      <!-- Quick interactive notice -->
+      <div class="showcase-hint">
+        <span class="hint-icon">🔄</span>
+        <span>مرر لأسفل الشاشة أو حرّك الماوس/المس الشاشة لرؤية الانعكاس والتدوير التلقائي ثلاثي الأبعاد</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Key Specs Quick Banner -->
+  <section class="quick-banner-section">
+    <div class="container">
+      <div class="quick-banner-grid">
+        <div class="quick-stat-card" data-reveal="fade-up">
+          <div class="stat-number">1024×600</div>
+          <div class="stat-label">دقة شاشة لمس HD</div>
+        </div>
+        <div class="quick-stat-card" data-reveal="fade-up" style="--delay: 0.1s;">
+          <div class="stat-number">1080P</div>
+          <div class="stat-label">كاميرا خلفية FHD عريضة</div>
+        </div>
+        <div class="quick-stat-card" data-reveal="fade-up" style="--delay: 0.2s;">
+          <div class="stat-number">178°</div>
+          <div class="stat-label">زاوية رؤية بانورامية</div>
+        </div>
+        <div class="quick-stat-card" data-reveal="fade-up" style="--delay: 0.3s;">
+          <div class="stat-number">12V–24V</div>
+          <div class="stat-label">توافق شامل مع السيارات والشاحنات</div>
+        </div>
+        <div class="quick-stat-card" data-reveal="fade-up" style="--delay: 0.4s;">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">تركيب فوري بدون فك ديكور</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Features & Specifications (All 12 Features Grid) -->
+  <section id="features" class="features-section">
+    <div class="container">
+      
+      <!-- Section Title -->
+      <div class="section-title-wrap" data-reveal="fade-up">
+        <span class="section-subtitle">المواصفات التقنية والمميزات الكاملة</span>
+        <h2 class="section-title">12 ميزة ذكية تجعل قيادتك أكثر أماناً ومتعة</h2>
+        <p class="section-desc">
+          تم تصميم كل ميزة بعناية فائقة لتمنحك أداءً سلساً وتكاملاً تاماً مع هاتفك وسيارتك.
+        </p>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="features-tabs" data-reveal="fade-up">
+        <button class="tab-btn active" data-filter="all">جميع المميزات (12)</button>
+        <button class="tab-btn" data-filter="smart">الاتصال والذكاء</button>
+        <button class="tab-btn" data-filter="display">الشاشة والكاميرا</button>
+        <button class="tab-btn" data-filter="install">التركيب والتوافق</button>
+      </div>
+
+      <!-- 12 Features Grid -->
+      <div class="features-grid" id="featuresGrid">
+
+        <!-- Feature 1 -->
+        <article class="feature-card" data-category="display" data-reveal="fade-up">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <span class="feature-number">01</span>
+          </div>
+          <h3 class="feature-title">شاشة لمس HD فائقة الوضوح</h3>
+          <p class="feature-text">
+            شاشة لمس HD بدقة 1024×600 لعرض واضح وألوان غنية، تمنحك استجابة فورية للمس مع زوايا رؤية مريحة حتى تحت أشعة الشمس المباشرة.
+          </p>
+          <div class="feature-tag">دقة 1024×600 HD</div>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="feature-card" data-category="smart" data-reveal="fade-up" style="--delay: 0.05s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                <path d="M9 6h6"/>
+              </svg>
+            </div>
+            <span class="feature-number">02</span>
+          </div>
+          <h3 class="feature-title">CarPlay و Android Auto لاسلكيًا</h3>
+          <p class="feature-text">
+            دعم Apple CarPlay وAndroid Auto لاسلكيًا لربط هاتفك بسهولة دون أي كابلات، للوصول الفوري للموسيقى وجهات الاتصال والتطبيقات.
+          </p>
+          <div class="feature-tag">اتصال لاسلكي فوري</div>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="feature-card" data-category="smart" data-reveal="fade-up" style="--delay: 0.1s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+            </div>
+            <span class="feature-number">03</span>
+          </div>
+          <h3 class="feature-title">ملاحة GPS وتوجيه صوتي مباشر</h3>
+          <p class="feature-text">
+            ملاحة GPS مباشرة مع خرائط Google Maps وتوجيه صوتي لحظي، لتفادي الازدحام وتحديث الطرقات في الوقت الحقيقي بكل سلاسة.
+          </p>
+          <div class="feature-tag">خرائط Google Maps المباشرة</div>
+        </article>
+
+        <!-- Feature 4 -->
+        <article class="feature-card" data-category="display" data-reveal="fade-up" style="--delay: 0.15s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                <circle cx="12" cy="13" r="4"/>
+              </svg>
+            </div>
+            <span class="feature-number">04</span>
+          </div>
+          <h3 class="feature-title">كاميرا خلفية FHD 1080P بزاوية 178°</h3>
+          <p class="feature-text">
+            كاميرا خلفية FHD 1080P بزاوية رؤية واسعة قابلة للتعديل 178° لركن أكثر أمانًا ووضوح ليلي فائق يغطي المنطقة العمياء بالكامل.
+          </p>
+          <div class="feature-tag">رؤية ليلية 178° FHD</div>
+        </article>
+
+        <!-- Feature 5 -->
+        <article class="feature-card" data-category="smart" data-reveal="fade-up" style="--delay: 0.2s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+            <span class="feature-number">05</span>
+          </div>
+          <h3 class="feature-title">اتصال متعدد شامل (BT 5.0, Wi-Fi, FM)</h3>
+          <p class="feature-text">
+            اتصال متعدد الخيارات عبر Bluetooth 5.0 وWi-Fi وUSB وAUX وFM لبث الصوت المباشر لسماعات السيارة دون أي تأخير أو تشويش.
+          </p>
+          <div class="feature-tag">Bluetooth 5.0 + Wi-Fi + FM</div>
+        </article>
+
+        <!-- Feature 6 -->
+        <article class="feature-card" data-category="smart" data-reveal="fade-up" style="--delay: 0.25s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+            <span class="feature-number">06</span>
+          </div>
+          <h3 class="feature-title">تحكم صوتي ذكي عبر Siri و Google</h3>
+          <p class="feature-text">
+            تحكم صوتي ذكي عبر Siri وGoogle Assistant للمكالمات والأوامر الصوتية وإرسال الرسائل دون أن تشغل يديك عن عجلة القيادة.
+          </p>
+          <div class="feature-tag">Siri & Google Assistant</div>
+        </article>
+
+        <!-- Feature 7 -->
+        <article class="feature-card" data-category="smart" data-reveal="fade-up" style="--delay: 0.3s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <span class="feature-number">07</span>
+          </div>
+          <h3 class="feature-title">عرض شاشة الهاتف لاسلكيًا (Mirroring)</h3>
+          <p class="feature-text">
+            عرض شاشة الهاتف لاسلكيًا لمزامنة المحتوى وتشغيل الوسائط ومقاطع الفيديو واليوتيوب مباشرة على الشاشة الكبيرة أثناء التوقف.
+          </p>
+          <div class="feature-tag">AirPlay & Android Mirroring</div>
+        </article>
+
+        <!-- Feature 8 -->
+        <article class="feature-card" data-category="display" data-reveal="fade-up" style="--delay: 0.35s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+              </svg>
+            </div>
+            <span class="feature-number">08</span>
+          </div>
+          <h3 class="feature-title">صوت ستيريو نقي عبر سماعات السيارة</h3>
+          <p class="feature-text">
+            صوت ستيريو عالي الجودة مع إمكانية تشغيل الصوت عبر سماعات السيارة عبر ناقل FM المدمج أو كابل AUX أو البلوتوث المزدوج.
+          </p>
+          <div class="feature-tag">صوت Hi-Fi Stereo محيطي</div>
+        </article>
+
+        <!-- Feature 9 -->
+        <article class="feature-card" data-category="install" data-reveal="fade-up" style="--delay: 0.4s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <span class="feature-number">09</span>
+          </div>
+          <h3 class="feature-title">تركيب سهل وفوري (Plug & Play)</h3>
+          <p class="feature-text">
+            تركيب سهل وسريع دون الحاجة إلى فك الراديو الأصلي أو تعديل نظام السيارة، يحافظ على ضمان وكالة السيارة بنسبة 100%.
+          </p>
+          <div class="feature-tag">بدون فك أو تجريح أسلاك</div>
+        </article>
+
+        <!-- Feature 10 -->
+        <article class="feature-card" data-category="install" data-reveal="fade-up" style="--delay: 0.45s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16 12l-4-4-4 4M12 8v8"/>
+              </svg>
+            </div>
+            <span class="feature-number">10</span>
+          </div>
+          <h3 class="feature-title">حوامل مرنة بزاوية 180° و 360°</h3>
+          <p class="feature-text">
+            حوامل مرنة وقابلة للتعديل بزاوية 180° أو 360° لتثبيت مثالي على الزجاج الأمامي أو لوحة القيادة (الطبلون) بثبات فائق.
+          </p>
+          <div class="feature-tag">دوران كامل 360° مرن</div>
+        </article>
+
+        <!-- Feature 11 -->
+        <article class="feature-card" data-category="install" data-reveal="fade-up" style="--delay: 0.5s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <span class="feature-number">11</span>
+          </div>
+          <h3 class="feature-title">توافق عالمي بجهد 12V إلى 24V</h3>
+          <p class="feature-text">
+            توافق واسع مع السيارات والشاحنات والمركبات الترفيهية بجهد 12–24 فولت، تعمل فور التوصيل بمنفذ ولاعة السجائر.
+          </p>
+          <div class="feature-tag">سيارات • شاحنات • RVs</div>
+        </article>
+
+        <!-- Feature 12 -->
+        <article class="feature-card" data-category="smart" data-reveal="fade-up" style="--delay: 0.55s;">
+          <div class="card-glow-border"></div>
+          <div class="card-header">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <line x1="7" y1="8" x2="7" y2="8.01"/>
+                <line x1="11" y1="8" x2="11" y2="8.01"/>
+                <line x1="15" y1="8" x2="15" y2="8.01"/>
+              </svg>
+            </div>
+            <span class="feature-number">12</span>
+          </div>
+          <h3 class="feature-title">دعم USB و SD وقوائم عربية</h3>
+          <p class="feature-text">
+            دعم USB وبطاقات SD لتشغيل الملفات الصوتية والفيديو، مع إعدادات نظام متعددة اللغات مع تعريب كامل وسهل الاستخدام.
+          </p>
+          <div class="feature-tag">دعم وسائط + واجهة عربية</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Steps Section -->
+  <section id="steps" class="steps-section">
+    <div class="container">
+      <div class="section-title-wrap" data-reveal="fade-up">
+        <span class="section-subtitle">سهولة مطلقة في الاستخدام</span>
+        <h2 class="section-title">جاهزة للعمل خلال 3 دقائق فقط!</h2>
+        <p class="section-desc">لا تحتاج إلى فني ولا إلى أدوات معقدة، قم بالتركيب بنفسك بكل ثقة.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card" data-reveal="fade-up">
+          <div class="step-badge">1</div>
+          <div class="step-icon">📌</div>
+          <h3 class="step-title">ثبّت الشاشة</h3>
+          <p class="step-text">ثبّت الحامل المرفق على الزجاج الأمامي أو طبلون السيارة بقاعدة الشفط القوية واضبط الزاوية المناسبة.</p>
+        </div>
+
+        <div class="step-card" data-reveal="fade-up" style="--delay: 0.15s;">
+          <div class="step-badge">2</div>
+          <div class="step-icon">🔌</div>
+          <h3 class="step-title">وصّل كابل الطاقة</h3>
+          <p class="step-text">صل الشاحن المرفق بمنفذ الولاعة (12V–24V) لتبدأ الشاشة بالعمل تلقائياً فور تشغيل السيارة.</p>
+        </div>
+
+        <div class="step-card" data-reveal="fade-up" style="--delay: 0.3s;">
+          <div class="step-badge">3</div>
+          <div class="step-icon">📱</div>
+          <h3 class="step-title">اقترن واستمتع</h3>
+          <p class="step-text">شغّل البلوتوث بهاتفك لتفعيل CarPlay أو Android Auto لاسلكياً، وانطلق بتجربة ترفيه وملاحة ذكية!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-title-wrap" data-reveal="fade-up">
+        <span class="section-subtitle">إجابات واضحة لراحتك</span>
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+      </div>
+
+      <div class="faq-container">
+        
+        <div class="faq-item" data-reveal="fade-up">
+          <button class="faq-question">
+            <span>هل يتطلب تركيب الشاشة فك ديكور السيارة أو تجريح الأسلاك؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>أبداً! الشاشة خارجية ومستقلة تماماً، وتثبت على الطبلون أو الزجاج الأمامي وتعمل مباشرة عبر منفذ الولاعة دون لمس أي سلك أو التأثير على ضمان الوكالة.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal="fade-up" style="--delay: 0.1s;">
+          <button class="faq-question">
+            <span>هل تدعم الشاشة كلاً من الآيفون وأجهزة الأندرويد؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>نعم، تدعم الشاشة Apple CarPlay لأجهزة iPhone و Android Auto لجميع هواتف Android لاسلكياً عبر البلوتوث والواي فاي، بالإضافة إلى خاصية انعكاس الشاشة (Mirroring).</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal="fade-up" style="--delay: 0.2s;">
+          <button class="faq-question">
+            <span>كيف يتم نقل الصوت إلى سماعات السيارة الأصلية؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>يمكنك نقل الصوت بأكثر من طريقة: عبر التردد اللاسلكي FM Transmitter، أو عبر كابل AUX المباشر المرفق، أو عبر البلوتوث، كما تحتوي الشاشة على سماعة مدمجة مستقلة.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal="fade-up" style="--delay: 0.3s;">
+          <button class="faq-question">
+            <span>هل الكاميرا الخلفية تعمل تلقائياً عند الرجوع للخلف؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>نعم، الكاميرا الخلفية FHD 1080P بزاوية 178° تتحول تلقائياً على الشاشة عند تعشيق القير إلى وضع الرجوع (R) مع خطوط إرشادية واضحة للركن الآمن.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Big CTA Banner Section -->
+  <section class="cta-banner-section" data-reveal="fade-up">
+    <div class="container">
+      <div class="cta-banner-box">
+        <div class="cta-glow-effect"></div>
+        <h2 class="cta-title">جاهز لترقية تجربة قيادتك اليوم؟</h2>
+        <p class="cta-subtitle">
+          تواصل معنا مباشرة عبر واتساب لتأكيد طلبك والاستفادة من عروض التوصيل السريع والدعم الفني المباشر.
+        </p>
+        <a href="https://wa.me/966551798746" target="_blank" rel="noopener noreferrer" class="btn btn-primary-glow btn-xl btn-pulse">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.449.741.964 1.2 1.348 1.203 1.579 1.242 1.802 1.353.223.111.353.093.484-.058.13-.151.558-.65.707-.874.149-.224.298-.187.5-.112.203.075 1.288.607 1.51.718.223.111.371.166.425.26.054.094.054.545-.09 1.05z"/>
+          </svg>
+          <span>تواصل معنا عبر واتساب الآن</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer-container">
+      
+      <!-- Brand & Description -->
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <img src="images/icon.png" alt="أيقونة الشركة" class="logo-icon" width="40" height="40">
+          <img src="images/name.png" alt="شعار الشركة" class="logo-name" height="30">
+        </div>
+        <p class="footer-about">
+          نقدم أفضل حلول الشاشات الذكية وأنظمة الترفيه للمركبات، بتصميم متطور وتقنيات اتصال لاسلكية تلبي أعلى معايير الجودة والأمان على الطريق.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col links-col">
+        <h4 class="footer-title">روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">الرئيسية</a></li>
+          <li><a href="#showcase">المعرض التفاعلي</a></li>
+          <li><a href="#features">المواصفات والمميزات</a></li>
+          <li><a href="#steps">طريقة التركيب</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info & CTA -->
+      <div class="footer-col contact-col">
+        <h4 class="footer-title">خدمة العملاء والطلب</h4>
+        <p class="contact-desc">فريقنا متواجد على مدار الساعة للرد على استفساراتكم وتأكيد طلباتكم.</p>
+        <div class="contact-phone-badge">
+          <span class="phone-label">رقم الواتساب المباشر:</span>
+          <span class="phone-number" dir="ltr">+966 55 179 8746</span>
+        </div>
+        <a href="https://wa.me/966551798746" target="_blank" rel="noopener noreferrer" class="btn btn-primary-glow btn-md btn-pulse">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.449.741.964 1.2 1.348 1.203 1.579 1.242 1.802 1.353.223.111.353.093.484-.058.13-.151.558-.65.707-.874.149-.224.298-.187.5-.112.203.075 1.288.607 1.51.718.223.111.371.166.425.26.054.094.054.545-.09 1.05z"/></svg>
+          <span>تواصل معنا</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 جميع الحقوق محفوظة لـ شاشة السيارة الذكية.</p>
+        <p class="made-with">تصميم مبتكر وأداء عالي ⚡</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Floating WhatsApp Button -->
+  <aside class="floating-whatsapp-widget" id="floatingWhatsapp">
+    <a href="https://wa.me/966551798746" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="تواصل معنا عبر واتساب">
+      <div class="pulse-ring"></div>
+      <svg class="float-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.449.741.964 1.2 1.348 1.203 1.579 1.242 1.802 1.353.223.111.353.093.484-.058.13-.151.558-.65.707-.874.149-.224.298-.187.5-.112.203.075 1.288.607 1.51.718.223.111.371.166.425.26.054.094.054.545-.09 1.05z"/>
+      </svg>
+      <span class="float-tooltip">تواصل معنا عبر واتساب</span>
+    </a>
+  </aside>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

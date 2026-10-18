@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# شاشة السيارة الذكية (Smart Car Touchscreen) - Node.js Website
 
-## Getting Started
+صفحة هبوط حديثة وتفاعلية باللغة العربية (RTL) لشاشة السيارة الذكية التي تعمل باللمس، مع دعم Apple CarPlay و Android Auto لاسلكيًا.
 
-First, run the development server:
+---
+
+## 🚀 كيفية تشغيل الموقع عبر Node.js
+
+يمكنك تشغيل الموقع بخطوة واحدة سهلة:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm start
+```
+أو:
+```bash
+node server.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+بعد التشغيل، افتح المتصفح على الرابط التالي:
+👉 **[http://localhost:3000](http://localhost:3000)**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌟 أبرز مميزات الموقع
 
-## Learn More
+1. **تصميم عصري Dark Mode بالكامل**:
+   - خلفية داكنة راقية (`#0a0a0a` / `#121212`) مع شبكة سايبر خفيفة وتفاصيل حمراء متوهجة نيون (`#E50914`).
+   - خطوط عربية حديثة فائقة الوضوح (Cairo & Tajawal) من Google Fonts.
+   - دعم كامل ودقيق لاتجاه اليمين لليسار (RTL).
 
-To learn more about Next.js, take a look at the following resources:
+2. **شريط تنقل زجاجي مثبت (Glassmorphism Navbar)**:
+   - تأثير شفافية وضبابية (Backdrop Blur) مع شعار وأيقونة الشركة.
+   - روابط تنقل سريعة مع تمرير ناعم ومؤشر أحمر للقسم النشط.
+   - قائمة جانبية متجاوبة للشاشات الصغيرة والهواتف (Mobile Drawer).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **معرض تفاعلي ثلاثي الأبعاد 360° للشاشة (3D Interactive Showcase)**:
+   - عرض الواجهة الأمامية (`front product.png`) والواجهة الخلفية (`back product.png`).
+   - دوران تفاعلي ثلاثي الأبعاد مع حركة الماوس أو اللمس (Perspective Tilt & Sheen Glare).
+   - انتقال دوران تلقائي مع التمرير (Scroll-driven flip transition).
+   - أزرار للتبديل السريع بين الواجهتين الأمامية والخلفية وتدوير تلقائي مستمر.
+   - نقاط تفاعلية مضيئة (Hotspots) توضح تفاصيل الشاشة والمنافذ وقاعدة التثبيت.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **شبكة المواصفات والمميزات الـ 12 الكاملة**:
+   - بطاقات تفاعلية مع توهج أحمر نيون عند تمرير الماوس (`box-shadow: 0 0 25px rgba(229, 9, 20, 0.45)`).
+   - أيقونات عصرية مخصصة وتصنيف بالتبويبات (الاتصال، الشاشة، التركيب).
 
-## Deploy on Vercel
+5. **تكامل كامل مع WhatsApp**:
+   - أزرار CTA حمراء نابضة بتأثير وميض نيون لجذب الانتباه.
+   - زر عائم سفلي دائم للتواصل الفوري عبر واتساب:
+     `https://wa.me/966551798746`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 هيكل المشروع
+
+```text
+website/
+├── server.js              # سيرفر Node.js Express لتشغيل الموقع
+├── package.json           # إعدادات المشروع وتبعيات Express
+├── index.html             # الصفحة الرئيسية المتكاملة
+├── css/
+│   └── style.css          # ملف الأنماط والتصميم والمؤثرات
+├── js/
+│   └── main.js            # ملف الجافاسكريبت للتفاعل والحركة ثلاثية الأبعاد
+├── images/                # مجلد الصور المخصصة
+│   ├── icon.png
+│   ├── name.png
+│   ├── front product.png
+│   └── back product.png
+└── public/                # المجلد الثابت المخدوم عبر Express
+```
